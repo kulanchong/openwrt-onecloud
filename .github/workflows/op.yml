@@ -139,13 +139,12 @@ jobs:
         cd ..
         [ -e patch ] && cp -rf patch/nginx/luci.locations openwrt/feeds/packages/net/nginx/files-luci-support
         [ -e patch ] && cp -rf patch/nginx/${REPO_BRANCH}-uci.conf.template openwrt/feeds/packages/net/nginx-util/files
-        [ -e patch ] && cp -rf patch/kernel-6.12/bbr3/*.patch openwrt/target/linux/generic/backport-6.12
-        [ -e patch ] && cp -rf patch/kernel-6.12/btf/*.patch openwrt/target/linux/generic/hack-6.12
+
 
         
     - name: 添加玩客云
       run: |
-        git clone https://shiyu1314:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/shiyu1314/s805 -b 6.12 openwrt/target/linux/amlogic
+        git clone https://github.com/rmoyulong/OneCloud_OpenWrt/tree/master/lede6.6/target/linux/amlogic openwrt/target/linux/amlogic
          
     - name: 加载自定义配置
       run: |
