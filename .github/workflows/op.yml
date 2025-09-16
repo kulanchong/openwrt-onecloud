@@ -14,19 +14,19 @@ on:
       OP_IP:
         description: '静态IP地址'     
         required: false
-        default: '192.168.2.2' 
+        default: '192.168.66.50' 
         type: string
 
       OP_rootfs:
         description: '预设镜像大小'     
         required: false
-        default: '600' 
+        default: '1024' 
         type: string
    
       OP_author:
         description: '定制作者'     
         required: false
-        default: 'shiyu1314' 
+        default: 'QQ12340248' 
         type: string    
 
       CUSTOM_PLUGINS:
